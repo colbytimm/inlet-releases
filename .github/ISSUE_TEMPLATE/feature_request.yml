@@ -1,0 +1,69 @@
+name: Feature request
+description: Suggest something new for Inlet, or a change to something it already does.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Please search [open issues](https://github.com/colbytimm/inlet-releases/issues) first, and add a 👍 to an existing request instead of opening a new one.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the problem or the moment where Inlet gets in your way, not only the feature you have in mind.
+      placeholder: I keep a Space for each client, and I lose track of which Space a link from Slack will open in.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Inlet to do?
+      placeholder: Show which Space a link will open in before it opens, with a way to pick a different one.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Inlet?
+      options:
+        - Sidebar, Spaces or profiles
+        - Pinned tabs, favorites or folders
+        - Split view
+        - Command bar or history
+        - Little Inlet or Lighthouse
+        - Import from Arc
+        - Extensions
+        - Ad blocking or Zap
+        - Keyboard shortcuts
+        - Settings
+        - Something new
+    validations:
+      required: true
+
+  - type: dropdown
+    id: arc
+    attributes:
+      label: Did Arc do this?
+      description: Inlet is built for people coming from Arc, so it helps to know.
+      options:
+        - "Yes, and I miss it"
+        - "Yes, but differently"
+        - "No"
+        - "I never used Arc"
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How do you handle it today?
+      description: A workaround, another app, or nothing at all.
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Sketches, screenshots of how another browser does it, or links.

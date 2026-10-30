@@ -1,0 +1,124 @@
+name: Bug report
+description: Something in Inlet isn't working the way it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please check the [latest release](https://github.com/colbytimm/inlet-releases/releases/latest) first, in case it's already fixed, and search [open issues](https://github.com/colbytimm/inlet-releases/issues) for the same problem.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem in a sentence or two.
+      placeholder: Dragging a tab onto the page doesn't split it when the sidebar is on the right.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The shortest set of steps that shows the problem, starting from opening Inlet.
+      placeholder: |
+        1. Put the sidebar on the right in Settings › General.
+        2. Open two tabs.
+        3. Drag one tab onto the page.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: The page splits into two panes.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Inlet?
+      options:
+        - Sidebar, Spaces or profiles
+        - Pinned tabs, favorites or folders
+        - Split view
+        - Command bar or history
+        - Little Inlet or Lighthouse
+        - Import from Arc
+        - Extensions
+        - Ad blocking or Zap
+        - Loading or showing a website
+        - Settings
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Website
+      description: If the problem happens on a particular site, its address. Leave out anything private, like a link with a login token.
+      placeholder: https://example.com/page
+
+  - type: input
+    id: inlet-version
+    attributes:
+      label: Inlet version
+      description: Open Inlet › About Inlet, or run `brew info --cask inlet`.
+      placeholder: "0.1.2"
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      description: Open the Apple menu › About This Mac.
+      placeholder: "15.4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: chip
+    attributes:
+      label: Mac
+      options:
+        - Apple silicon
+        - Intel
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install
+    attributes:
+      label: How did you install Inlet?
+      options:
+        - Homebrew
+        - Downloaded the zip
+    validations:
+      required: true
+
+  - type: textarea
+    id: extensions
+    attributes:
+      label: Extensions
+      description: If you use extensions, list them. Many page problems come from an extension.
+      placeholder: 1Password, uBlock Origin Lite
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else
+      description: Drag in screenshots or a screen recording. Check that they don't show anything private.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I'm on the latest release, or I've said which version above.
+          required: true
+        - label: I searched open issues and didn't find this one.
+          required: true
