@@ -90,7 +90,6 @@ WebKit doesn't offer every API Chrome does, so some extensions won't work:
 
 - Extensions that block web requests can't, so uBlock Origin doesn't work. uBlock Origin Lite does.
 - Extensions don't run in incognito windows yet.
-- 1Password's extension can talk to the 1Password app. Other password managers that need their desktop app aren't supported yet.
 
 ## Privacy
 
